@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.hilttest.R
 import com.example.hilttest.example2.SecondActivity
+import com.example.hilttest.mvvm.MVVMActivity
 import com.example.hilttest.recyclerView.RecyclerActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
@@ -57,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        btn_mvvm.setOnClickListener {
+            startActivity(Intent(this@MainActivity , MVVMActivity::class.java ))
+        }
 
 
     }
