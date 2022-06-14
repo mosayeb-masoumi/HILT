@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HiltTest">
         <activity
+            android:name=".recyclerView.RecyclerActivity"
+            android:exported="false" />
+        <activity
             android:name=".example2.SecondActivity"
             android:exported="false" />
         <activity

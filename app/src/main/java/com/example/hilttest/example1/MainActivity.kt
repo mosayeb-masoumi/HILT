@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.hilttest.R
 import com.example.hilttest.example2.SecondActivity
+import com.example.hilttest.recyclerView.RecyclerActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -28,9 +29,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn.setOnClickListener {
-            startActivity(Intent(this@MainActivity , SecondActivity::class.java ))
-        }
+
+
+
 
         val thirdClassTime = thirdClass.thirdClassTime()
         var aa = thirdClassTime
@@ -43,6 +44,18 @@ class MainActivity : AppCompatActivity() {
 
         var secondClassTimeFromFirstClass = firstClass.secondClass.secondClassTime()
         var hh = secondClassTimeFromFirstClass
+
+
+
+        btn.setOnClickListener {
+            startActivity(Intent(this@MainActivity , SecondActivity::class.java ))
+        }
+
+
+        btn_recycler.setOnClickListener {
+            startActivity(Intent(this@MainActivity , RecyclerActivity::class.java ))
+        }
+
 
 
 
