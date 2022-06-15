@@ -16,7 +16,8 @@ class MVVMActivity : AppCompatActivity() {
     var context:Context? = null
 
     @Inject
-    lateinit var viewModel: MvvmViewModel
+    lateinit var
+            viewModel: MvvmViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

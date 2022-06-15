@@ -18,15 +18,35 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="recycler activity"
+        android:text="recycler module activity"
         android:id="@+id/btn_recycler"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_recycler_constructor"
+        android:id="@+id/btn_recycler_constructor"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="mvvm activity"
         android:id="@+id/btn_mvvm"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog factory activity"
+        android:id="@+id/btn_dialog_factory"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog factory activity"
+        android:id="@+id/btn_retrofit"/>
+
+
 
 
 

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hilttest">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -11,10 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HiltTest">
         <activity
+            android:name=".retrofit.RetrofitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dialog_factory.DialogFactoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerView.with_construcor.RecyclerWithConstructorActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvvm.MVVMActivity"
             android:exported="false" />
         <activity
-            android:name=".recyclerView.RecyclerActivity"
+            android:name=".recyclerView.with_activity_module.RecyclerWithModuleActivity"
             android:exported="false" />
         <activity
             android:name=".example2.SecondActivity"

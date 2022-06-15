@@ -1,8 +1,9 @@
 package com.example.hilttest
 
+import com.example.hilttest.dialog_factory.DialogFactory
 import com.example.hilttest.example1.ThirdClass
 import com.example.hilttest.example2.MyClass2
-import com.example.hilttest.recyclerView.MyAdapter
+import com.example.hilttest.recyclerView.with_activity_module.MyAdapter
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,6 +39,13 @@ class ActivityModule {
     @Singleton
     fun provideAdapter(): MyAdapter {
         return MyAdapter()
+    }
+
+
+    @Provides
+    @Singleton
+    fun provideDialogFactory(): DialogFactory {
+        return DialogFactory()
     }
 
 }

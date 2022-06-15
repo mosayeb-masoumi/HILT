@@ -1,4 +1,4 @@
-package com.example.hilttest.recyclerView
+package com.example.hilttest.recyclerView.with_construcor
 
 import android.content.Context
 import android.view.View

@@ -3,11 +3,13 @@ package com.example.hilttest.example1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.hilttest.R
+import com.example.hilttest.dialog_factory.DialogFactoryActivity
 import com.example.hilttest.example2.SecondActivity
 import com.example.hilttest.mvvm.MVVMActivity
-import com.example.hilttest.recyclerView.RecyclerActivity
+import com.example.hilttest.recyclerView.with_activity_module.RecyclerWithModuleActivity
+import com.example.hilttest.recyclerView.with_construcor.RecyclerWithConstructorActivity
+import com.example.hilttest.retrofit.RetrofitActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -54,12 +56,27 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_recycler.setOnClickListener {
-            startActivity(Intent(this@MainActivity , RecyclerActivity::class.java ))
+            startActivity(Intent(this@MainActivity , RecyclerWithModuleActivity::class.java ))
+        }
+
+        btn_recycler_constructor.setOnClickListener {
+            startActivity(Intent(this@MainActivity , RecyclerWithConstructorActivity::class.java ))
         }
 
 
         btn_mvvm.setOnClickListener {
             startActivity(Intent(this@MainActivity , MVVMActivity::class.java ))
+        }
+
+        btn_dialog_factory.setOnClickListener {
+            startActivity(Intent(this@MainActivity , DialogFactoryActivity::class.java ))
+        }
+
+
+
+
+        btn_retrofit.setOnClickListener {
+            startActivity(Intent(this@MainActivity , RetrofitActivity::class.java ))
         }
 
 

@@ -1,4 +1,4 @@
-package com.example.hilttest.recyclerView
+package com.example.hilttest.recyclerView.with_activity_module
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_recycler.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class RecyclerActivity : AppCompatActivity() {
+class RecyclerWithModuleActivity : AppCompatActivity() {
 
     @Inject
     lateinit var myAdapter: MyAdapter

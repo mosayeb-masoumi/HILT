@@ -10,7 +10,7 @@ class MvvmViewModel @Inject constructor(var repository : MvvmRepository) {
 
     fun getUserName(): LiveData<String> {
 
-        mutableLiveData = repository.getBundles()
+        mutableLiveData = repository.getUserName()
         return mutableLiveData
     }
 

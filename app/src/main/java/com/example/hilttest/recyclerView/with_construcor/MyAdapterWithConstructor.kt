@@ -1,13 +1,16 @@
-package com.example.hilttest.recyclerView
+package com.example.hilttest.recyclerView.with_construcor
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hilttest.R
+import com.example.hilttest.recyclerView.with_activity_module.MyViewHolder
+import javax.inject.Inject
 
-class MyAdapter () : RecyclerView.Adapter<MyViewHolder>(){
 
+
+class MyAdapterWithConstructor @Inject constructor() : RecyclerView.Adapter<MyViewHolder>(){
 
     private var list: MutableList<String> = ArrayList()
     private var context: Context? = null
