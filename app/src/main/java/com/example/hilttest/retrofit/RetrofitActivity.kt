@@ -9,11 +9,13 @@ import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_mvvmactivity.*
+import kotlinx.android.synthetic.main.activity_retrofit.*
 
 
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
 
 @AndroidEntryPoint
@@ -21,13 +23,16 @@ class RetrofitActivity : AppCompatActivity() {
 
     var context: Context? = null
 
+    @Inject
+    lateinit var retrofitClient: RetrofitClient
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_retrofit)
 
 
 
-        btn_get_data.setOnClickListener {
+        btn_get_list.setOnClickListener {
 
             getListFromServer()
         }
@@ -60,7 +65,8 @@ class RetrofitActivity : AppCompatActivity() {
 
     private fun getListFromServer() {
 
-        val request = RetrofitClient().buildService(APIServices::class.java , context)
+//        val request = RetrofitClient().buildService(APIServices::class.java , context)
+        val request = retrofitClient.buildService(APIServices::class.java , context)
         val  call = request.getUserList()
 
         call?.enqueue(object : Callback<JsonArray?> {
